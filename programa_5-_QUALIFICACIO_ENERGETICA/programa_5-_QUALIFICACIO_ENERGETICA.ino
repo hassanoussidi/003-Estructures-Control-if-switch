@@ -1,21 +1,21 @@
 /**********************************************************************************
-**                                                                               **
-**                          Control Structures                                   **
-**                                                                               **
-**                                                                               **
+**             La eficiencia energética de los electrodomésticos:                **
+**                   Los más eficientes: A+++_A++_A+                             **
+**                     Consumo moderado: A_ B                                    **
+**                         Alto consumo: C_ D                                    **
 **********************************************************************************/
 
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-int QualificacioEnergetica = 43.3;
+int QualificacioEnergetica = 44;
 
 //********** Setup ****************************************************************
-void setup()              // run once, when the sketch starts
+void setup()         // se ejecuta una vez
 {
-  Serial.begin(9600);     // set up Serial library at 9600 bps
+  Serial.begin(9600); // activa el puerto serie y fija la velocidad en 9600 bps 
 
-  if (QualificacioEnergetica < 3.5)
+  if (QualificacioEnergetica < 3.5)    
   {
   Serial.print("A");
   } 
@@ -47,7 +47,7 @@ void setup()              // run once, when the sketch starts
 }
 
 //********** Loop *****************************************************************
-void loop()   // we need this to be here even though its empty
+void loop()   // se ejecuta cíclicamente
 {
 }
 
