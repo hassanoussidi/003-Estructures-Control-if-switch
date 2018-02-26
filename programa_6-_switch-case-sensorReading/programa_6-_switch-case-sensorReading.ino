@@ -6,7 +6,7 @@ y si ponemos otro  número, nos pondrá (I don't know)
 
 int sensorReading = 3; 
 
-void setup()
+void setup() // se ejecuta una vez
 {
   Serial.begin(9600); // activa el puerto serie y fija la velocidad en 9600 bps 
 
@@ -31,7 +31,7 @@ void setup()
   } 
 }
 
-void loop() {}
+void loop() {} // se ejecuta cíclicamente
 
 
 
