@@ -1,43 +1,32 @@
-/**********************************************************************************
-**                                                                               **
-**                          Control Structures                                   **
-**                                                                               **
-**                                                                               **
-**********************************************************************************/
+/*******************************************************************************
+temperaturas inferior a 90ºC muestra por pantalla "Agua aún no hierve"
+iguales o superiores a 90ºC e inferiores a 100ºC  "Agua apunte de hervir"
+igual a 100ºC  "Agua a 100ºC"
+superiores a 100ºC  "Agua hirviendo"
+*******************************************************************************/
 
-//********** Includes *************************************************************
+int tempAigua = 100;  /*según que valor ponemos nos aparecerá una 
+                       frase u otra en la pantalla (monitor serie)*/
 
-//********** Variables ************************************************************
-int tempAigua = 101;
-
-//********** Setup ****************************************************************
-void setup()              // run once, when the sketch starts
+void setup()          // se ejecuta una vez
 {
-  Serial.begin(9600);     // set up Serial library at 9600 bps
+  Serial.begin(9600); //Activa el puerto serie y fija la velocidad en 9600 bps
 
-  if (tempAigua < 90)
-  {
-  Serial.print("Aigua encara no bull");
-  } 
-  else if (tempAigua >=90&&tempAigua<100)
-  {
-  Serial.print("Aigua apunt de bullir");
-  }
-  else if (tempAigua ==100)
-  {
-  Serial.print("Aigua a 100");
-  }
-  else
-  {
-  Serial.print("Aigua bullint");   
-  }
- 
+  if (tempAigua < 90){     
+  Serial.print("Agua aún no hierve");}  
+   
+  else if (tempAigua >=90&&tempAigua<100){ 
+  Serial.print("Agua apunte de hervir");}   
+   
+  else if (tempAigua ==100){             
+  Serial.print("Agua a 100ºC");}          
+  
+  else{
+  Serial.print("Agua hirviendo");}
 }
 
-//********** Loop *****************************************************************
-void loop()   // we need this to be here even though its empty
-{
+void loop(){   // se ejecuta cíclicamente
 }
 
-//********** Funcions *************************************************************
+
 

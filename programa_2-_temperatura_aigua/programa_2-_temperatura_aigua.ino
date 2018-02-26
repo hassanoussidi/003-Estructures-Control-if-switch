@@ -1,30 +1,24 @@
-/**********************************************************************************
-**                                                                               **
-**                          Control Structures                                   **
-**                                                                               **
-**                                                                               **
-**********************************************************************************/
+/******************************************************************************                                                                                          
+si la temperatura (valor que ponemos en la variable tempAgua)
+supera los 100ºC, que muestre en la pantalla (monitor serie) 
+"Agua supera los 100C, esta hirviendo!"
+*******************************************************************************/
 
-//********** Includes *************************************************************
+int tempAigua = 10;
 
-//********** Variables ************************************************************
-int tempAigua = 101;
-
-//********** Setup ****************************************************************
-void setup()              // run once, when the sketch starts
+//********** Setup ************************************************************
+void setup() // se ejecuta una vez
 {
-  Serial.begin(9600);     // set up Serial library at 9600 bps
-
-  if (tempAigua > 100)
-  {
-    Serial.print("Aigua supera els 100C, esta bullint!");
-  } 
+  Serial.begin(9600);//Activa el puerto serie y fija la velocidad en 9600 bps
+  
+  if (tempAigua > 100){
+    Serial.print("Agua supera los 100C, esta hirviendo!");} 
 }
 
-//********** Loop *****************************************************************
-void loop()   // we need this to be here even though its empty
+
+void loop() // hace que el programa se ejecute cíclicamente
 {
 }
 
-//********** Funcions *************************************************************
+
 

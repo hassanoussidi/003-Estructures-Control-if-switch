@@ -1,35 +1,20 @@
-/**********************************************************************************
-**                                                                               **
-**                          Control Structures                                   **
-**                                                                               **
-**                                                                               **
-**********************************************************************************/
+/*******************************************************************************
+temperaturas inferiores a 100ºC muestra por pantalla "Agua aún no hierve"
+iguales o superiores a 100ºC muestra por pantalla "Agua hirviendo" 
+*******************************************************************************/
 
-//********** Includes *************************************************************
-
-//********** Variables ************************************************************
 int tempAigua = 10;
 
-//********** Setup ****************************************************************
-void setup()              // run once, when the sketch starts
+void setup()           //  se ejecuta una vez
 {
-  Serial.begin(9600);     // set up Serial library at 9600 bps
+  Serial.begin(9600); //activa el puerto serie y fija la velocidad en 9600 bps
 
-  if (tempAigua < 100)
-  {
-    Serial.print("Aigua encara no bull");
-  } 
-   else
-  {
-    Serial.print("Aigua bullint");
-  }
+  if (tempAigua < 100){
+    Serial.print("Aigua encara no bull");}
+     
+   else{
+    Serial.print("Aigua bullint");}
 }
 
-//********** Loop *****************************************************************
-void loop()   // we need this to be here even though its empty
-{
+void loop(){   // se ejecuta cíclicamente
 }
-
-//********** Funcions *************************************************************
-
-
